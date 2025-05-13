@@ -1,0 +1,5 @@
+jsonfs
+*.json
+*.o
+*.vim
+*.cache
