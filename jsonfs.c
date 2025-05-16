@@ -20,9 +20,7 @@ void jsonfs_usage() {
 
 // convert an integer to string
 static char* integer_to_string(size_t value) {
-        // if value == 0, we can't just do value + 1 as that would
-        // equal to 1 and we won't have enough space for the null terminator
-        int size = value == 0 ? 2 : value + 1;
+        int size = snprintf(NULL, 0, "%lu", value) + 1;
         char* buf = malloc(size);
         snprintf(buf, size, "%zu", value);
         return buf;
