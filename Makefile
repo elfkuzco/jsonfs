@@ -10,7 +10,7 @@ RPATH = -Wl,-rpath,$(PREFIX)/lib
 LDLIBS = -ljansson
 
 jsonfs: $(objects)
-	$(CC) $(CFLAGS) -o jsonfs $(objects) $(LDFLAGS) $(RPATH) $(LDLIBS)
+	$(CC) $(CFLAGS) -o jsonfs $(objects) $(LDFLAGS) $(RPATH) $(LDLIBS) `pkg-config fuse --libs`
 
 .PHONY: clean
 clean:
