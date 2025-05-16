@@ -33,12 +33,12 @@ The filesystem supports only read operations.
 
 ## Usage
 
-    ```sh
-    ./jsonfs [-o nonmepty] <path-to-json-file> <mountpoint>
-    ```
+```sh
+./jsonfs [-o nonmepty] <path-to-json-file> <mountpoint>
+```
 
 ## Unmount
 
-    ```sh
-    fusermount -u <mountpoint>
-    ```
+```sh
+fusermount -u <mountpoint>
+```
